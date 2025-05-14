@@ -1,4 +1,3 @@
-
 const { Booking, Status, Delivery_method, Payment_method, Discount, Cart } = require("../models");
 const { validateBooking } = require("../validation/bookingVal");
 

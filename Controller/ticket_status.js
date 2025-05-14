@@ -32,7 +32,7 @@ exports.getTicketStatus = async (req, res) => {
     res.status(500).json({ error: 'Server xatosi' });
   }
 };
-
+  
 exports.updateTicketStatus = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
@@ -51,7 +51,7 @@ exports.deleteTicketStatus = async (req, res) => {
   try {
     const deleted = await Ticket_status.destroy({ where: { id: req.params.id } });
     if (!deleted) return res.status(404).json({ error: 'Chipta holati topilmadi' });
-    res.json({ message: 'Chipta holati o‘chirildi' });
+    res.json({ message: 'Chipta holati ochirildi' });
   } catch (error) {
     res.status(500).json({ error: 'Server xatosi' });
   }
